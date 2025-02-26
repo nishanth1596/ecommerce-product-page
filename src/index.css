@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-White: #fff;
+  --color-Black: #000;
+  --color-Grey950: #1d2026;
+  --color-Grey500: #69707d;
+  --color-Grey300: #c3cad9;
+  --color-Grey100: #e4e9f2;
+  --color-Grey50: #f6f8fd;
+  --color-Orange500: #ff7e1b;
+  --color-Orange300: #ffab6a;
+
+  /* font family */
+  --font-KumbhSans: "Kumbh Sans", "serif";
+}
+
+@layer components {
+  .text-Preset-1 {
+    @apply text-[2.75rem] leading-12 font-bold;
+  }
+
+  .text-Preset-2 {
+    @apply text-[1.75rem] leading-8 font-bold;
+  }
+
+  .text-Preset-3-Bold {
+    @apply text-base leading-[26px] font-bold;
+  }
+
+  .text-Preset-3-Regular {
+    @apply text-base leading-[26px] font-normal;
+  }
+
+  .text-Preset-4 {
+    @apply text-[0.94rem] leading-[26px];
+  }
+
+  .text-Preset-5 {
+    @apply text-[0.813rem] leading-4 tracking-[2px];
+  }
+
+  .text-Preset-6 {
+    @apply text-xs leading-[15px] tracking-[1.85px];
+  }
+}
