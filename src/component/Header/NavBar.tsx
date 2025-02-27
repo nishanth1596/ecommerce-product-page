@@ -15,7 +15,6 @@ function NavBar() {
       {!isOpen && (
         <Button
           img={menuIcon}
-          alt="Menu Icon"
           ariaLabel="Open menu"
           onClick={handleShowNavBar}
         />
@@ -27,7 +26,6 @@ function NavBar() {
             onClick={handleShowNavBar}
             img={closeMenuIcon}
             ariaLabel="Close Menu"
-            alt="Close menu Icon"
           />
 
           <ul className="*:text-Grey950 mt-14 flex flex-col gap-6 *:text-lg *:leading-[26px] *:font-bold">

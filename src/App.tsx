@@ -1,29 +1,43 @@
+import { useState } from "react";
 import Header from "./component/Header/Header";
-import ProductCard from "./component/ProductCard";
+import ProductCard from "./component/Product/ProductCard";
+
+type InitialCartItemProp = {
+  id: number;
+  quantity: number;
+};
+
+const initialCartItem: InitialCartItemProp[] = [
+  {
+    id: 0,
+    quantity: 0,
+  },
+];
 
 function App() {
+  const [cartItem, setCartItem] =
+    useState<InitialCartItemProp[]>(initialCartItem);
+
+  function handleIncreaseItem(newItem: InitialCartItemProp) {
+    setCartItem((prevItems) => [...prevItems, newItem]);
+  }
+
+  function handleDecreaseItem(newItem: InitialCartItemProp) {
+    setCartItem((prevItems) => [...prevItems, newItem]);
+  }
+
   return (
     <div className="mx-auto flex h-dvh flex-col items-center">
       <Header />
       <main>
-        <ProductCard />
+        <ProductCard
+          onDecreaseItem={handleDecreaseItem}
+          onIncreaseItem={handleIncreaseItem}
+          cartItem={cartItem}
+        />
       </main>
     </div>
   );
 }
 
 export default App;
-
-// Sneaker Company
-
-// Fall Limited Edition Sneakers
-
-// These low-profile sneakers are your perfect casual wear companion. Featuring a
-// durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-// $125.00
-// 50%
-// $250.00
-
-// 0
-// Add to cart
